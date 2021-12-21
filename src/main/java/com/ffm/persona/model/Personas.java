@@ -1,10 +1,12 @@
 package com.ffm.persona.model;
 
 import io.swagger.annotations.ApiModelProperty;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 
-@Data
+@Setter
+@Getter
 public class Personas {
 	
 	
