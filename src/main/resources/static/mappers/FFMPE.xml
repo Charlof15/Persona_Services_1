@@ -15,17 +15,18 @@
 	<!-- Select por id -->
 	<select id="getidPersonas"
 		resultType="com.ffm.persona.model.Personas">
-	SELECT FPER_ID idPersona, FPER_NOMBRE_PERSONA
-	nombrePersona,FPER_APELLIDO_PATERNO
-	apellidoPaterno,FPER_APELLIDO_MATERNO
-	apellidoMaterno,FPER_TELEFONO_CELULAR
-	telefonoCelular,FPER_CORREO_ELECTRONICO correoElectronico FROM
-	FFM_DEMO_PERSONAS WHERE FPER_ID =#{idPersona}
+		SELECT FPER_ID idPersona, FPER_NOMBRE_PERSONA
+		nombrePersona,FPER_APELLIDO_PATERNO
+		apellidoPaterno,FPER_APELLIDO_MATERNO
+		apellidoMaterno,FPER_TELEFONO_CELULAR
+		telefonoCelular,FPER_CORREO_ELECTRONICO correoElectronico FROM
+		FFM_DEMO_PERSONAS WHERE FPER_ID =#{idPersona}
 	</select>
 
 	<!-- Eliminar persona por Id -->
 	<delete id="deletePersona">
-		delete from FFM_DEMO_PERSONAS where FPER_ID =#{idPersona}
+		delete from FFM_DEMO_PERSONAS where FPER_ID
+		=#{idPersona}
 	</delete>
 	<!-- Insert persona -->
 	<insert id="insertPersona">
@@ -34,9 +35,13 @@
 		values(#{nombrePersona},#{apellidoPaterno},#{apellidoMaterno},#{telefonoCelular},#{correoElectronico})
 	</insert>
 	<!-- Actualiza persona -->
-	<update id="updatePersona" >
-		update FFM_DEMO_PERSONAS set FPER_NOMBRE_PERSONA=
-		#{nombrePersona},FPER_APELLIDO_PATERNO = #{apellidoPaterno},FPER_APELLIDO_MATERNO = #{apellidoMaterno} ,FPER_TELEFONO_CELULAR = #{telefonoCelular},FPER_CORREO_ELECTRONICO = #{correoElectronico}  where
+	<update id="updatePersona">
+		update FFM_DEMO_PERSONAS set
+		FPER_NOMBRE_PERSONA=
+		#{nombrePersona},FPER_APELLIDO_PATERNO =
+		#{apellidoPaterno},FPER_APELLIDO_MATERNO = #{apellidoMaterno}
+		,FPER_TELEFONO_CELULAR = #{telefonoCelular},FPER_CORREO_ELECTRONICO =
+		#{correoElectronico} where
 		FPER_ID = #{idPersona}
 	</update>
 

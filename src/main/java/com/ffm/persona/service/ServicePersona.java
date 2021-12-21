@@ -54,11 +54,10 @@ public class ServicePersona {
 		return outputWs;
 	}
 
-	public Object actualizarPersonas(Integer idPersona, String nombrePersona, String apellidoPaterno, String apellidoMaterno,
-			String telefonoCelular, String correoElectronico) {
+	public Object actualizarPersonas(Integer idPersona, Personas personas) {
 		OutputEliminaPersona outputdelete = new OutputEliminaPersona();
-		personaMapper.updatePersona(idPersona, nombrePersona, apellidoPaterno, apellidoMaterno, telefonoCelular, correoElectronico);
-		System.out.println(nombrePersona + apellidoPaterno);
+		personas.setIdPersona(idPersona);
+		personaMapper.updatePersona(personas);
 		outputdelete.setMensaje("Operacion correcta");
 		outputdelete.setDescripcion("Se actualizo correcta la persona");
 		return outputdelete;
