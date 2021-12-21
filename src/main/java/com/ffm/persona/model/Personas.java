@@ -1,15 +1,9 @@
 package com.ffm.persona.model;
-
 import io.swagger.annotations.ApiModelProperty;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
-
-@Setter
-@Getter
-public class Personas {
-	
-	
+@Data
+public class Personas {	
 	Integer idPersona;
 	@ApiModelProperty(example = "Karla", name = "nombrePersona", notes = "Nombre de la persona que se creara", required = true)
 	String nombrePersona;
@@ -20,6 +14,5 @@ public class Personas {
 	String fechaRegistro;
 	@ApiModelProperty(example = "1",  notes = "Determina si el registro esta visible o no valor 1= activo 0 = inactivo", required = true)
 	String activo;
-
 }
 	
