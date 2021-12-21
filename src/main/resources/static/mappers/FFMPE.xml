@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
 <mapper namespace="com.ffm.persona.mapper.PersonaMapper">
 	<!-- Select persona all -->
 	<select id="getAllPersonas"
@@ -33,12 +34,10 @@
 		values(#{nombrePersona},#{apellidoPaterno},#{apellidoMaterno},#{telefonoCelular},#{correoElectronico})
 	</insert>
 	<!-- Actualiza persona -->
-	<update id="updatePersona">
-		update FFM_DEMO_PERSONAS set FPER_NOMBRE_PERSONA =
+	<update id="updatePersona" >
+		update FFM_DEMO_PERSONAS set FPER_NOMBRE_PERSONA=
 		#{nombrePersona},FPER_APELLIDO_PATERNO = #{apellidoPaterno},FPER_APELLIDO_MATERNO = #{apellidoMaterno} ,FPER_TELEFONO_CELULAR = #{telefonoCelular},FPER_CORREO_ELECTRONICO = #{correoElectronico}  where
 		FPER_ID = #{idPersona}
 	</update>
-
-
 
 </mapper>

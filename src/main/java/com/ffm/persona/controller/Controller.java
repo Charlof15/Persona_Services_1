@@ -52,8 +52,7 @@ public class Controller {
 	@PatchMapping(path = "/personas/idPersona/{idPersona}")
 	public Object actualizaPersona(@PathVariable(value = "idPersona")Integer idPersona, String nombrePersona, String apellidoPaterno, String apellidoMaterno,
 			String telefonoCelular, String correoElectronico,@RequestBody Personas personas) {
-
-		return servicePersonas.actualizarPersonas(nombrePersona, apellidoPaterno, apellidoMaterno, telefonoCelular, correoElectronico);
+		return servicePersonas.actualizarPersonas(idPersona, nombrePersona, apellidoPaterno, apellidoMaterno, telefonoCelular, correoElectronico);
 	}
 
 }

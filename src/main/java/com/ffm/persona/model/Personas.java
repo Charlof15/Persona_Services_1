@@ -2,6 +2,7 @@ package com.ffm.persona.model;
 
 public class Personas {
 	
+	
 	Integer idPersona;
 	String nombrePersona;
 	String apellidoPaterno;

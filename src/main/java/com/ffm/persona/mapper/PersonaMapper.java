@@ -13,7 +13,7 @@ public interface PersonaMapper {
 	List<Personas> getidPersonas(Integer idPersona);
 	void deletePersona(Integer idPersona);
 	void insertPersona(Personas personas);
-	void updatePersona(@Param("nombrePersona")String nombrePersona,@Param("apellidoPaterno") String apellidoPaterno,@Param("apellidoMaterno") String apellidoMaterno,@Param("telefonoCelular") String telefonoCelular,@Param("correoElectronico") String correoElectronico);
+	void updatePersona(@Param("idPersona") Integer idPersona,@Param("nombrePersona")String nombrePersona,@Param("apellidoPaterno") String apellidoPaterno,@Param("apellidoMaterno") String apellidoMaterno,@Param("telefonoCelular") String telefonoCelular,@Param("correoElectronico") String correoElectronico);
 	
 }
 
