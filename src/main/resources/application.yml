@@ -1,0 +1,9 @@
+spring:
+  datasource:   
+    url: jdbc:oracle:thin:@10.216.48.101:1521/GIMTPD
+    username: FFMPE
+    password: fFm_p3_2018
+   
+mybatis:
+  mapper-locations: classpath:static/mappers/*.xml
+#${variables de entorno }
